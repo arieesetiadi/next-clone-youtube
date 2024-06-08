@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SearchBar from './search-bar';
 
 export default function NavigationBar() {
     return (
@@ -16,17 +17,7 @@ export default function NavigationBar() {
 
             {/* Center */}
             <div className="flex items-center gap-3">
-                <form className="flex w-96">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className="input input-bordered w-full rounded-full rounded-br-none rounded-tr-none focus:border-blue-500"
-                    />
-
-                    <button type="button" className="btn rounded-full rounded-bl-none rounded-tl-none px-5">
-                        <img src="/images/icons/search.svg" alt="Search Icon" />
-                    </button>
-                </form>
+                <SearchBar />
 
                 <button className="btn btn-circle">
                     <img src="/images/icons/mic.svg" alt="Mic Icon" />
