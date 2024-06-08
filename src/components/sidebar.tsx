@@ -16,8 +16,8 @@ const links = [
 export default function SideBar() {
     return (
         <div>
-            {links.map(({ text, href, icon }) => (
-                <SideBarLink href={href}>
+            {links.map(({ text, href, icon }, key) => (
+                <SideBarLink key={key} href={href}>
                     <img src={icon} alt={`${text} Icon`} />
                     {text}
                 </SideBarLink>

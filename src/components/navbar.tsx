@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import SearchBar from './search-bar';
+import { useContext } from 'react';
+import { SideBarContext } from '@/pages/_app';
 
 export default function NavBar() {
+    const { toggleSidebar } = useContext(SideBarContext);
+
     return (
         <div className="flex justify-between px-4 py-2">
             {/* Left */}
             <div className="flex items-center gap-3">
-                <button className="btn btn-circle">
+                <button onClick={toggleSidebar} className="btn btn-circle">
                     <img src="/images/icons/hamburger.svg" alt="Hamburger Icon" />
                 </button>
 
