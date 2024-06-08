@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import SearchBar from './search-bar';
 
-export default function NavigationBar() {
+export default function NavBar() {
     return (
         <div className="flex justify-between px-4 py-2">
             {/* Left */}
